@@ -37,7 +37,7 @@ do
 	# version from the Atlassian JIRA version feed.
 	sed --in-place "s/${CURRENT_VERSION}/${VERSION}/g" Dockerfile
 	NAME="${URL#https://www.atlassian.com/software/jira/downloads/binary/}"
-	sed --in-place "s/atlassian-jira-software-.*.tar.gz/${NAME}/g" Dockerfile
+#	sed --in-place "s/atlassian-jira-software-.*.tar.gz/${NAME}/g" Dockerfile
 
 	echo "Ready for acceptance testing"
 
