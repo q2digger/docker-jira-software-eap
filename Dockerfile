@@ -3,7 +3,7 @@ FROM anapsix/alpine-java:8_server-jre
 # https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.0.0-EAP07.tar.gz
 MAINTAINER Dmitry Gerasimov <q2digger@gmail.com>
 
-ENV JIRA_VERSION 8.0.0-EAP08
+ENV JIRA_VERSION 8.0.0-EAP07
 
 ENV RUN_USER    daemon
 ENV RUN_GROUP   daemon
