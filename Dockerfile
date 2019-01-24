@@ -4,6 +4,7 @@ FROM anapsix/alpine-java:8_server-jre
 MAINTAINER Dmitry Gerasimov <q2digger@gmail.com>
 
 ENV JIRA_VERSION 8.0.0-RC
+ENV JIRA_DOWNLOAD_URL https://s3.amazonaws.com/downloads-public-us-east-1/software/jira/downloads/atlassian-jira-software-8.0.0-RC.tar.gz
 
 ENV RUN_USER    daemon
 ENV RUN_GROUP   daemon
@@ -35,7 +36,7 @@ RUN set -x \
     && chmod -R 700            "${JIRA_HOME}" \
     && chown -R daemon:daemon  "${JIRA_HOME}" \
     && mkdir -p                "${JIRA_INSTALL_DIR}/conf/Catalina" \
-    && curl -Ls                "https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-"${JIRA_VERSION}".tar.gz" | tar -xz --directory "${JIRA_INSTALL_DIR}" --strip-components=1 --no-same-owner \
+    && curl -Ls                "${JIRA_DOWNLOAD_URL}" | tar -xz --directory "${JIRA_INSTALL_DIR}" --strip-components=1 --no-same-owner \
     && curl -Ls                "https://dev.mysql.com/get/Downloads/Connector-J/mysql-connector-java-5.1.46.tar.gz" | tar -xz --directory "${JIRA_INSTALL_DIR}/lib" --strip-components=1 --no-same-owner "mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar" \
     && rm -f                   "${JIRA_INSTALL_DIR}/lib/postgresql-*" \
     && curl -Ls                "https://jdbc.postgresql.org/download/postgresql-42.2.4.jar" -o "${JIRA_INSTALL_DIR}/lib/postgresql-42.2.4.jar" \
