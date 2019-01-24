@@ -1,9 +1,9 @@
 FROM anapsix/alpine-java:8_server-jre
-# https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.0.0-BETA-x64.bin
-# https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.0.0-BETA.tar.gz
+# https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.0.0-RC-x64.bin
+# https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.0.0-RC.tar.gz
 MAINTAINER Dmitry Gerasimov <q2digger@gmail.com>
 
-ENV JIRA_VERSION 8.0.0-BETA
+ENV JIRA_VERSION 8.0.0-RC
 
 ENV RUN_USER    daemon
 ENV RUN_GROUP   daemon
