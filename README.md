@@ -1,6 +1,14 @@
 ## Atlassian Jira Software EAP (Early Access Preview)
 [Atlassian Developer blog](https://checkup.atlassian.com/server/jira/platform/)
 
+An Early Access Program (EAP) release is a public development release leading up to the official release of a Jira version.
+Development releases are a snapshot of our work in progress, primarily focused on allowing Jira users to see the new features in advance and provide us with some useful feedback. It also gives app developers an opportunity to test and fix their apps in advance of an official release.
+
+What are the features of this container?
+1. I added a driver to connect to MySQL databases
+2. I updated the driver to connect to the Postgresql databases.
+3. The container contains an automatic database connection setup script. Thus, when you first start the application, this dialog will be omitted.(example below)
+
 ### Simple line to start: 
 
 ```
