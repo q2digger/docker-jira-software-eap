@@ -24,8 +24,7 @@ CURRENT_VERSION=$(sed -nr 's/ENV JIRA_VERSION[[:space:]]*(.+)/\1/p' Dockerfile)
 # the actual content and then get the version number from the first entry.
 
 curl -Ls 'https://my.atlassian.com/download/feeds/eap/jira.json' \
-    | sed 's/downloads(\(.*\))/\1/g' | jq -r '.[] | select(.description | test("TAR\\.GZ Archive")) \
-    | ("" + .zipUrl + " " + .version + " " + .releaseNotes)' \
+    | sed 's/downloads(\(.*\))/\1/g' | jq -r '.[] | select(.description | test("TAR\\.GZ Archive")) | ("" + .zipUrl + " " + .version + " " + .releaseNotes)' \
     | grep jira-software | head -1 | while read -r URL VERSION NOTES
 do
 
