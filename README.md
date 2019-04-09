@@ -125,7 +125,7 @@ networks:
 ### SSL
 I prepare self-signed certs with command:
 ```
-openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jira.local.net.key -out jira.local.net.crt
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout jira.local.net.key -out jira.local.net.crt -subj "/C=GB/ST=London/L=London/O=Global Security/OU=IT Department/CN=jira.local.net"
 ```
 
 > Written with [StackEdit](https://stackedit.io/).
