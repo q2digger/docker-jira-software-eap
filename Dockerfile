@@ -1,10 +1,10 @@
 FROM anapsix/alpine-java:8_server-jre
-# https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.4.0-EAP02-x64.bin
-# https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.4.0-EAP02.tar.gz
+# https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.4.0-EAP03-x64.bin
+# https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.4.0-EAP03.tar.gz
 MAINTAINER Dmitry Gerasimov <q2digger@gmail.com>
 
-ENV JIRA_VERSION 8.4.0-EAP02
-ENV JIRA_DOWNLOAD_URL https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.4.0-EAP02.tar.gz
+ENV JIRA_VERSION 8.4.0-EAP03
+ENV JIRA_DOWNLOAD_URL https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.4.0-EAP03.tar.gz
 
 ENV RUN_USER    daemon
 ENV RUN_GROUP   daemon
