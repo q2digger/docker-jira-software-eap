@@ -4,7 +4,7 @@ FROM anapsix/alpine-java:8_server-jre
 MAINTAINER Dmitry Gerasimov <q2digger@gmail.com>
 
 ENV JIRA_VERSION 8.13.0-EAP01
-ENV JIRA_DOWNLOAD_URL https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.13.0-EAP01.tar.gz
+ENV JIRA_DOWNLOAD_URL https://www.atlassian.com/software/jira/downloads/binary/atlassian-jira-software-8.12.0-RC01.tar.gz
 
 ENV RUN_USER    daemon
 ENV RUN_GROUP   daemon
